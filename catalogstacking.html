@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+
+    <title>Sales Troubleshooting</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <h1>Identify the unwanted percentage</h1>
+            <br>
+        </div>
+        <p>The first thing we want to do is establish the known discount. For the example below, the shop is showing a catalog
+            discount of 70% on a sale that should show 40%</p>
+        <br>
+        <br>
+
+
+        <a>
+            <img class="discount" src="discountexample.png" alt="discounts">
+        </a>
+        <br>
+        <ol>
+            <li>Identify the known and correct catalog discount (40%) and locate that number in the left column.</li>
+            <br>
+            <li>Determine the stacking percentage</li>
+            <ul>
+                <li>Our known discount is 40%. Located on the left we follow that to the incorrect discount we are getting (70%).
+                    This is highlighted in red.</li>
+                <li>We then follow the incorrect discount up and get our stacking percentage (yellow).</li>
+                <li>In this instance, the stacking percentage is 50% (40% stacking with 50% is 70%).</li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <a>
+                <img class="discount" src="discountmatrix.png" alt="matrix">
+            </a>
+            <br>
+            <li>Now that we have the stacking discount (50%), our next task is to find what active rules or categories have a
+                50% catalog discount and see if the product is common between them. Click on one of the following links to
+                search categories or catalog rules</li>
+            <br>
+        </ol>
+        <div class="row">
+            <div class="col-xs-6">
+                <ul>
+                    <li>Click Below "Catalog Rules Lookup" link below</li>
+                    <li>search for the day you are troubleshooting</li>
+                    <li>Search all rules with "50%" (stacking amount) in the title</li>
+                    <li>Make necessary corrections</li>
+                </ul>
+            </div>
+            <div class="col-xs-6">
+                <ul>
+                    <li>Click Below "Active Category Lookup" link below</li>
+                    <li>search active categories that give 50% (stacking %) discounts</li>
+                    <li>Remove affected items from category or PA sale</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <a href="https://direct.daz3d.com/index_redir.php/D4Z_adm1n/promo_catalog/index/key/6504c56955b3b3ef7b6e488448fc543255465d9fe9a083814e44884bb3918448/">
+                    <button class="btn btn-block btn-primary">Catalog Rules Lookup</button>
+                </a>
+            </div>
+            <div class="col-xs-6">
+                <a href="https://docs.google.com/spreadsheets/d/1cPiI_H6v3eM6PKE5wTJ4qARmiLfxeo1C6Ew8O1jDX48/edit?ts=591a2975#gid=1343189473">
+                    <button class="btn btn-block btn-primary">Active Category Lookup</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
