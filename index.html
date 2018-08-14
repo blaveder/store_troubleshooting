@@ -64,9 +64,14 @@
             </div>
             <div class="col-lg-6 text-right">
                 <br>
-
-                <button id="calculate" class="btn btn-danger" onclick="addPerct();">get Discount</button>
                 <button id="clearBtn" class="btn btn-success" onclick="clearThis();">Clear Form</button>
+                <button id="calculate" class="btn btn-danger" onclick="addPerct();">get Discount</button>
+
+            </div>
+            <div class="col-lg-12 text-center">
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                    see matrix data sheet
+                </button>
             </div>
 
         </div>
@@ -79,6 +84,31 @@
         </div>
 
     </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Matrix Data Sheet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/discountmatrix.png" class="matrixImg" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script>
         var catalogRule = document.getElementById("catalogRule");
         var shoppingRule = document.getElementById("shoppingRule");

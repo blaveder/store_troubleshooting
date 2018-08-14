@@ -39,7 +39,10 @@ body {
      margin-top: 20%;
      border: 8px grey solid; 
          }
- 
+         .modal-dialog {
+            max-width: 1300px !important;
+            margin: 1.75rem auto;
+        }
  .buttons1 {
      margin-top: 10%;
          }
@@ -50,4 +53,9 @@ body {
     border: 1px solid #a3a3a3;
     background: white;
     border-radius: 5px;
+}
+.matrixImg {
+    width: 100%;
+    max-width: 1328px;
+
 }
