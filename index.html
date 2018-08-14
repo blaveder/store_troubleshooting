@@ -37,23 +37,37 @@
             </div>
             <!-- RULES INSTRUCTIONS -->
             <div class="col-lg-12 text-center">
-                <h4>Discount Matrix Calculator:</h4>
+                <h4 class="greyBg">Discount Matrix Calculator:</h4>
             </div>
 
 
             <div class="col-lg-4 text-center">
                 <label for="exampleFormControlInput1">Example: 40 (no symbols)</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Discount should be:">
+                <input type="email" class="form-control" id="shouldBe" placeholder="Discount should be:" value="">
             </div>
             <div class="col-lg-4 text-center">
                 <label for="exampleFormControlInput1">Example: 40 (no symbols)</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Discount % showing:">
+                <input type="email" class="form-control" id="showingDisount" placeholder="Discount % showing:">
             </div>
             <div class="col-lg-4 text-center">
-                <label for="exampleFormControlInput1">Look for:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Stacking with %:">
+                <label for="exampleFormControlInput1">Look for: Category or Catalog Rule:
+                </label>
+                <input type="email" class="form-control" id="stacking" placeholder="(may have 1/-1% error) Stacking with %:">
             </div>
+            <div class="col-lg-6 text-left">
+                <br>
 
+                <a href="https://docs.google.com/spreadsheets/d/1cPiI_H6v3eM6PKE5wTJ4qARmiLfxeo1C6Ew8O1jDX48/edit?ts=591a2975#gid=1343189473"
+                    target="_blank" id="calculate" class="btn btn-outline-dark">Current Cat Sales</a>
+                <a href="https://direct.daz3d.com/index_redir.php/D4Z_adm1n/promo_catalog/index/key/79ab178e9c8fac1082ae504b13b87e4e27710a3b992b721a134c92e6b8434f3e/"
+                    id="clearBtn" target="_blank" class="btn btn-outline-dark">Catalog Price Rules</a>
+            </div>
+            <div class="col-lg-6 text-right">
+                <br>
+
+                <button id="calculate" class="btn btn-danger" onclick="addPerct();">get Discount</button>
+                <button id="clearBtn" class="btn btn-success" onclick="clearThis();">Clear Form</button>
+            </div>
 
         </div>
     </div>
@@ -92,7 +106,39 @@
                 shoppingRule.style.display = "none";
             }
         }
+        function addPerct() {
+            var shouldBe = document.getElementById("shouldBe");
+            var showingDiscount = document.getElementById("showingDisount");
+            var stacking = document.getElementById("stacking");
+            var rond = Math.ceil(0.33333333 * 100) / 100;
 
+            // finds difference here
+            var diffA = 100 - shouldBe.value;
+            var diffB = 100 - showingDiscount.value;
+
+            // converts numbers to %
+            var percA = (diffA / 100).toFixed(2);
+            var percB = (diffB / 100).toFixed(2);
+
+            // turn result to a whole number
+            var makeWhole = (percB / percA);
+            var makeRound = Math.ceil(makeWhole * 100) / 100;
+            var addHundred = Math.round(makeRound * 100);
+            console.log(addHundred);
+
+            stacking.value = 100 - addHundred + "%";
+
+            console.log("_______________________________________")
+            // console.log(diffA + " is difference of correct discount ");
+            // console.log(diffB + " is difference of wrong discount ");
+        };
+        function clearThis() {
+            var clearMe;
+            document.getElementById("shouldBe").value = "";
+            document.getElementById("showingDisount").value = "";
+            document.getElementById("stacking").value = "";
+            console.log("test")
+        }
 
 
     </script>
